@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Hello') {
             steps {
@@ -10,7 +9,6 @@ pipeline {
         stage('Validation') {
             steps{
                 script{
-                    
                     if(params.build){
                     echo " We will build the project "
                     sh 'ls'
@@ -19,11 +17,8 @@ pipeline {
                     dir('test'){
                     sh 'ls' }
                     }
-                    
-                    
                 }
             }
-            
         }
         stage('t') {
             steps {
